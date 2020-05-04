@@ -9,8 +9,8 @@ These operations are capable of being performed by multiple threads without any 
 All functionalities are handled internally with the use of locks.
 
 ## How it works
-Each ticket is identified by user id, fligt id, and ticket number. 
-In the current setup, to get a ticket, an agent thread calls book_flight().
+Each ticket is identified by user id, flight id, and ticket number. 
+In the current setup, to get a ticket, an agent thread books the flight by calling book_flight().
 The ARS then saves the userid, flightid, and ticketnumber in the array of flight data structure.
 
 test.c, main.c, and wait.c are all programs that test the efficiency and correctness of the system.
