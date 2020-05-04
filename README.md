@@ -12,6 +12,7 @@ All functionalities are handled internally with the use of locks.
 Each ticket is identified by user id, flight id, and ticket number. 
 In the current setup, to get a ticket, an agent thread books the flight by calling book_flight().
 The ARS then saves the userid, flightid, and ticketnumber in the array of flight data structure.
+The flight data structure includes a lock and a conditional variable to properly handle multiple threads.  
 
 test.c, main.c, and wait.c are all programs that test the efficiency and correctness of the system.
 
@@ -31,5 +32,4 @@ $ ./test {# of threads}
 $ ./wait {# of threads} 
 $ ./main {# of threads}
 ```
-
 
