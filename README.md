@@ -14,7 +14,7 @@ In the current setup, to get a ticket, an agent thread books the flight by calli
 The ARS then saves the userid, flightid, and ticketnumber in the array of flight data structure.
 The flight data structure includes a lock and a conditional variable to properly handle multiple threads.  
 
-test.c, main.c, and wait.c are all programs that test the efficiency and correctness of the system.
+ars.c consists of the implementation of the system. test.c, main.c, and wait.c are all programs that test its efficiency and correctness. 
 
 ## How to run(from command line)
 To create executable files, for all 3 programs, use Makefile by running:
